@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firearm Holder Tracking System</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- Custom CSS -->
+    <style>
+        /* Add your custom styles here */
+
+        /* Word Map API styles */
+        #word-map {
+            width: 100%;
+            height: 300px; /* Adjust the height as needed */
+        }
+
+        /* Custom styles for nav links */
+        .nav-link.btn {
+            color: #fff;
+        }
+
+        .nav-link.btn.btn-purple {
+            background-color: #000;
+            border-color: #800080; /* purple */
+            box-shadow: 0 0 10px #800080; /* purple shadow */
+        }
+
+        .nav-link.btn.btn-purple:hover {
+            background-color: #222; /* darker background on hover */
+        }
+
+        /* Map container */
+        #map-container {
+            height: 400px;
+            margin-top: 20px;
+        }
+        /* Custom padding for navigation items */
+        .nav-item {
+            padding: 1rem;
+            
+        }
+
+        /* Footer button styles */
+        .footer-btn {
+            background-color: #000;
+            border-color: #800080; /* purple */
+            box-shadow: 0 0 10px #800080; /* purple shadow */
+            color: #fff;
+            width: 100%;
+        }
+
+        .footer-btn:hover {
+            background-color: #222; /* darker background on hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="container-fluid bg-dark text-white py-3">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Logo -->
+                <div class="col-md-1">
+                    <img src="your-logo.png" alt="Logo" height="50">
+                </div>
+               
+                <!-- Navigation -->
+                <div class="col-md-11 text-right">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-purple" href="#"><i class="fas fa-home"></i> Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-purple" href="#"><i class="fas fa-briefcase"></i> Holster</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-purple" href="#"><i class="fas fa-map-marked-alt"></i> Location</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-purple" href="#"><i class="fas fa-info-circle"></i> About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-purple" href="#"><i class="fas fa-sign-in-alt"></i> Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-purple" href="#"><i class="fas fa-user-plus"></i> Signup</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Map Container -->
+    <div id="map-container"></div>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Add your main content here -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="container-fluid bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <button class="btn btn-block footer-btn">Column 1</button>
+                </div>
+                <div class="col-md-3">
+                    <button class="btn btn-block footer-btn">Column 2</button>
+                </div>
+                <div class="col-md-3">
+                    <button class="btn btn-block footer-btn">Column 3</button>
+                </div>
+                <div class="col-md-3">
+                    <button class="btn btn-block footer-btn">Column 4</button>
+                </div>
+                <div class="col-md-6">
+                    <p>&copy; 2024 Gun Holder Tracking. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-right">
+                    <p>Terms of Service | Privacy Policy</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS (optional, only needed if you want to use Bootstrap JS components) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- Leaflet Map JavaScript -->
+    <script>
+        // Initialize the map
+        var map = L.map('map-container').setView([51.505, -0.09], 13);
+
+        // Add the tile layer (map tiles)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Add a marker to the map
+        L.marker([51.5, -0.09]).addTo(map)
+            .bindPopup('A marker here!');
+
+        // Add more map features as needed
+    </script>
+</body>
+</html>
