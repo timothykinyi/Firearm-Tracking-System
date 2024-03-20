@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Firearm Holder Tracking System</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Font Awesome CSS -->
@@ -13,9 +16,15 @@
     <link  rel="stylesheet"  href="css/styles.css" >
     <link  rel="stylesheet"  href="css/aboutus.css" >
     <link  rel="stylesheet"  href="css/images.css" >
+    <link  rel="stylesheet"  href="css/dynamic.css" >
+
 
 </head>
 <body>
+
+    <div id="dynamic-background-container">
+        <h2 id="animating-word"><marquee>Gun Holder Tracking Management System</marquee></h2>
+    </div>
     <!-- Header -->
     <header class="container-fluid bg-dark text-white py-3">
         <div class="container">
@@ -57,7 +66,15 @@
 
     <!-- Main Content -->
     <main class="container" id="main-content">
-        <div id="dynamic-background"></div>
+        <div id="background-container">
+            <div id="dynamic-background">
+                
+                <!-- Add more images as needed -->
+            </div>
+            <button id="prev-button">Previous</button>
+            <button id="next-button">Next</button>
+        </div>
+        
         <!-- Add your main content here -->
         <section id="holster-info" class="py-4">
             <div class="container">
@@ -149,8 +166,8 @@
                 <!-- Column 4 -->
                 <div class="col-md-3">
                     <h5>Partners</h5>
-                    <img src="images/partner1.png" alt="Partner 1"><br>
-                    <img src="images/partner2.png" alt="Partner 2"><br>
+                    <img src="" alt="Partner 1"><br>
+                    <img src="" alt="Partner 2"><br>
                 </div>
                 <!-- Copyright -->
                 <div class="col-md-6">

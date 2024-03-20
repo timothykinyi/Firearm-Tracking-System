@@ -1,0 +1,40 @@
+#background-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden; /* Hide overflow to display only one image at a time */
+}
+
+#dynamic-background {
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 1000%; /* Ensure enough width to fit all images */
+    height: 100%;
+    transition: transform 0.3s ease; /* Add smooth transition effect for scrolling */
+}
+
+#dynamic-background img {
+    display: inline-block;
+    max-height: 100%;
+    margin-right: 10px;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#prev-button {
+    left: 0;
+}
+
+#next-button {
+    right: 0;
+}

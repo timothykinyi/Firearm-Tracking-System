@@ -1,5 +1,10 @@
 
 /* Add your custom styles here */
+body{
+    background-image: url('../images/gun1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 /* Word Map API styles */
 #word-map {

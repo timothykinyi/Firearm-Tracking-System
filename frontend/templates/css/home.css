@@ -1,0 +1,8 @@
+#dynamic-background-container {
+    height: 300px; /* Adjust height as needed */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding-top: 100px;
+}
