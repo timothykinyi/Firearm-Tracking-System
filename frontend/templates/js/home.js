@@ -1,33 +1,36 @@
-$(document).ready(function() {
-    // Array of image URLs
-    var images = ['', 'image2.jpg', 'image3.jpg'];
-    var currentIndex = 0;
+const imageUrls = [
+    "images/altlogo.jpg",
+    "images/bg.jpg",
+    "images/holster1.jpg",
+    // Add more image URLs as needed
+];
 
-    // Function to change background image
-    function changeBackground() {
-        $('#dynamic-background-container').css('background-image', 'url(images/' + images[currentIndex] + ')');
-        currentIndex = (currentIndex + 1) % images.length;
-    }
+let currentIndex = 0;
+const intervalDuration = 3000; // Change image every 3 seconds
 
-    // Call changeBackground function initially
-    changeBackground();
+function setRandomBackground() {
+    const dynamicBackground = document.getElementById('dynamic-background-container');
 
-    // Set interval to change background image every 5 seconds
-    setInterval(changeBackground, 5000);
+    // Load images into the container
+    imageUrls.forEach((imageUrl) => {
+        const img = document.createElement('img');
+        img.src = imageUrl;
+        dynamicBackground.appendChild(img);
+    });
 
-    // Array of words to animate
-    var words = ['Gun', 'Holder', 'Tracking', 'Management', 'System'];
-    var wordIndex = 0;
+    // Start automatic image change timer
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % imageUrls.length;
+        updateBackgroundPosition();
+    }, intervalDuration);
+}
 
-    // Function to animate words
-    function animateWords() {
-        $('#animating-word').text(words[wordIndex]);
-        wordIndex = (wordIndex + 1) % words.length;
-    }
+function updateBackgroundPosition() {
+    const dynamicBackground = document.getElementById('dynamic-background-container');
+    const imgWidth = dynamicBackground.clientWidth;
+    dynamicBackground.style.transform = `translateX(-${currentIndex * imgWidth}px)`;
+}
 
-    // Call animateWords function initially
-    animateWords();
-
-    // Set interval to animate words every 2 seconds
-    setInterval(animateWords, 2000);
-});
+window.onload = function() {
+    setRandomBackground();
+};

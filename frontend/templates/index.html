@@ -22,9 +22,12 @@
 </head>
 <body>
 
-    <div id="dynamic-background-container">
-        <h2 id="animating-word"><marquee>Gun Holder Tracking Management System</marquee></h2>
-    </div>
+    <div id="background-containerZ">
+        <div id="dynamic-backgroundZ"></div>
+        <div id="animating-words" style="font-size: large; font-family: Georgia, 'Times New Roman', Times, serif;" ><marquee behavior="scroll" direction="left">
+            <b>Gun Tracking Management System</b></marquee></div>
+
+      </div>
     <!-- Header -->
     <header class="container-fluid bg-dark text-white py-3">
         <div class="container">
@@ -67,21 +70,20 @@
     <!-- Main Content -->
     <main class="container" id="main-content">
         <div id="background-container">
-            <div id="dynamic-background">
-                
-                <!-- Add more images as needed -->
-            </div>
-            <button id="prev-button">Previous</button>
-            <button id="next-button">Next</button>
-        </div>
-        
+            <div id="dynamic-background"></div>
+            <button id="prev-button">&lt;</button>
+            <button id="next-button">&gt;</button>
+            <div id="animating-words"></div>
+          </div>
+          
+          
         <!-- Add your main content here -->
         <section id="holster-info" class="py-4">
             <div class="container">
                 <div class="row">
                     <!-- Text Column -->
-                    <div class="col-md-6">
-                        <h2>Holster Information</h2>
+                    <div class="col-md-6" style="color: #fff;">
+                       <h2>Holster Information</h2>
                         <p>
                             "A holster is a specialized device designed to securely hold and carry a firearm, 
                             ensuring it remains safely in place while allowing quick access when needed. Available 
@@ -103,18 +105,19 @@
         
         <section id="about-us" class="py-4">
             <div class="container">
-                <div class="row">
+                <div class="row align-items-center"> <!-- Align items vertically -->
                     <!-- Button Column -->
-                    <div class="col-md-12">
-                        <button class="btn btn-block btn-purple btn-lg mb-4">About Us</button>
+                    <div class="col-md-12 mb-4"> <!-- Add margin bottom for spacing -->
+                        <button class="btn btn-block btn-purple btn-lg py-0">About Us</button>
+
                     </div>
                     <!-- Image Column -->
                     <div class="col-md-6 mb-4 mb-md-0">
                         <img src="images/altlogo.jpg" class="img-fluid" alt="About Us Image">
                     </div>
                     <!-- Text Column -->
-                    <div class="col-md-6">
-                        <p>
+                    <div class="col-md-6" style="color: #fff;">
+                        <p >
                             The Firearm Holder Tracking System is a comprehensive solution designed to track and manage firearms
                             issued to police officers. Our system provides real-time tracking of firearms, allowing law enforcement
                             agencies to monitor the location and status of each firearm in their inventory. With advanced features
@@ -137,6 +140,7 @@
             </div>
         </section>
         
+        
 
     </main>
     
@@ -146,9 +150,9 @@
                 <!-- Column 1 -->
                 <div class="col-md-3">
                     <h5>Contact Us</h5>
-                    <p><i class="fas fa-envelope"></i> contact@example.com</p>
-                    <p><i class="fas fa-phone"></i> +1 (123) 456-7890</p>
-                    <p><i class="fas fa-map-marker-alt"></i> 123 Main St, City, Country</p>
+                    <p><i class="fas fa-envelope"></i> guntracking@info.co.ke</p>
+                    <p><i class="fas fa-phone"></i> +254 710000000</p>
+                    <p><i class="fas fa-map-marker-alt"></i>  24 lang'ata, Nairobi, Kenya</p>
                 </div>
                 <!-- Column 2 -->
                 <div class="col-md-3">
