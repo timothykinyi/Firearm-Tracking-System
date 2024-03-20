@@ -12,7 +12,7 @@
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    
     <link  rel="stylesheet"  href="css/styles.css" >
     <link  rel="stylesheet"  href="css/aboutus.css" >
     <link  rel="stylesheet"  href="css/images.css" >
@@ -188,23 +188,24 @@
     <!-- Bootstrap JS (optional, only needed if you want to use Bootstrap JS components) -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <!-- Leaflet Map JavaScript -->
-    <script>
-        // Initialize the map
-        var map = L.map('map-container').setView([51.505, -0.09], 13);
-
-        // Add the tile layer (map tiles)
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC80zluRjSQk9H_nLOu_YdjhtD7X0yPgr4&callback=initMap">
+</script>
+<script>
+    // Initialize the map
+    function initMap() {
+        var map = new google.maps.Map(document.getElementById('map-container'), {
+            center: {lat: 51.505, lng: -0.09},
+            zoom: 13
+        });
         // Add a marker to the map
-        L.marker([51.5, -0.09]).addTo(map)
-            .bindPopup('A marker here!');
-
-        // Add more map features as needed
-    </script>
+        var marker = new google.maps.Marker({
+            position: {lat: 51.5, lng: -0.09},
+            map: map,
+            title: 'A marker here!'
+        });
+    }
+</script>
     <!-- Your JavaScript file -->
 
     <script src="js/script.js"></script>
