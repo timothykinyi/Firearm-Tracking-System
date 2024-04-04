@@ -1,0 +1,247 @@
+/* Global Styles */
+body,*{
+    font-family: 'BioRhyme', serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'BioRhyme', serif;
+    /* Optionally, you can specify different weights for headings */
+    font-weight: 700;
+}
+
+
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: #23527c;
+    text-decoration: underline;
+}
+
+.page {
+    position: relative;
+    overflow-x: hidden;
+}
+
+
+
+/* Main Content Styles */
+.page-content {
+    padding-top: 30px;
+}
+
+.well {
+    background: #fff;
+    margin-top: 30px;
+    padding: 60px 15px;
+}
+
+.well h2 {
+    color: #333;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.well p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.well-1 {
+    background-color: #f5f5f5;
+}
+
+.well-2 {
+    background-color: #fafafa;
+}
+
+.well-3 {
+    background-color: #f5f5f5;
+}
+
+.well-4 {
+    background-color: #fff;
+    background-size: cover;
+    color: #fff;
+    padding: 100px 15px;
+    text-align: center;
+}
+
+.well-5 {
+    background-color: #fff;
+    padding-bottom: 60px;
+    padding-top: 30px;
+}
+
+.well-6 {
+    background-color: #337ab7;
+    color: #fff;
+    padding: 100px 15px;
+    text-align: center;
+}
+
+/* Testimonial Styles */
+.quote {
+    border-left: 3px solid #337ab7;
+    margin-bottom: 30px;
+}
+
+.box-sm {
+    display: flex;
+    align-items: center;
+}
+
+.box__left {
+    margin-right: 15px;
+}
+
+.box__body {
+    flex-grow: 1;
+}
+
+.quote q {
+    font-size: 18px;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.quote cite {
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Footer Styles */
+.page-footer {
+    background-color: #337ab7;
+    color: #fff;
+    padding: 30px 0;
+}
+
+.page-footer a {
+    color: #fff;
+}
+
+.page-footer a:hover,
+.page-footer a:focus {
+    color: #e5e5e5;
+}
+
+.page-footer .inline-list {
+    margin-top: 15px;
+    padding: 0;
+}
+
+.page-footer .inline-list li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.page-footer .copyright {
+    font-size: 14px;
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    .page-header .rd-navbar-nav-wrap {
+        display: none;
+    }
+}
+
+/* Additional Styles */
+.icon-wrapper {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.icon-wrapper .icon {
+    font-size: 50px; /* Adjust as needed */
+    margin-bottom: 10px;
+}
+
+/* Navbar Button Styles */
+.navbar-btn {
+    background-color: #337ab7;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 10px;
+}
+
+.navbar-btn:hover {
+    background-color: #23527c;
+}
+
+/* Search Button Styles */
+.search-btn {
+    background-color: #28a745;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-btn:hover {
+    background-color: blue;
+}
+
+
+.col-md-3 img.round {
+    width: 100px; /* Adjust the width as needed */
+    height: 100px; /* Adjust the height as needed */
+    border-radius: 50%; /* Applies a 50% border radius */
+    margin-bottom: 20px; /* Adds spacing between the images */
+}
+
+.round {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+}
+
+/* Custom CSS for increasing font size */
+.well-3 h2,
+.well-3 h5,
+.well-3 p {
+    font-size: 25px; /* Adjust the font size as needed */
+}
+
+
+/* Custom Styles for Section */
+.well-1 img,.well-2 img {
+    border-radius: 150px; /* Applies rounded corners to the image */
+    box-shadow: 0 0 20px rgba(0, 0, 255, 2);
+}
+
+/* Custom Styles for Section Text */
+.well-1 h2,
+.well-1 p,
+.well-2 h2,
+.well-2 p {
+    font-size: 25px;
+    font-family: 'BioRhyme', serif;/* Adjust the font size as needed */
+    font-weight: 400;
+}
+.well-1 h2,
+.well-2 h2,
+.well-1 .heading-3,
+.well-2 .heading-3 {
+    color: #333; /* Update the color as needed */
+}
+
+
+.col-md-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start of the column */
+}
+
+.col-md-3 a {
+    display: flex;
+    align-items: center; /* Align icon and text vertically */
+}
+
+.col-md-3 a i {
+    margin-right: 10px; /* Add some spacing between the icon and text */
+}

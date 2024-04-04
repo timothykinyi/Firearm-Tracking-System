@@ -1,0 +1,26 @@
+/* Adjust padding and margin for the header contents */
+.page-header .container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Move the "Login" button to the right */
+.page-header .navbar-collapse {
+    justify-content: space-between;
+}
+
+/* Reduce margin between search form and "Login" button */
+.page-header form {
+    margin-right: 0px;
+}
+
+/* Adjust padding and margin for the "Login" button */
+.page-header .ml-3 {
+    margin-right: 0; /* Remove default margin */
+}
+
+/* Ensure "Login" button stays on the same line */
+.page-header .navbar-nav {
+    display: flex;
+    align-items: center;
+}

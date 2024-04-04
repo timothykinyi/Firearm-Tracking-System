@@ -1,0 +1,32 @@
+.map-container {
+    height: 700px;
+    padding: 20px;
+    margin: 20px; /* Adjust margin as needed */
+    border-radius: 200px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 15px 5px rgba(0, 0, 255, 6);
+  }
+  
+  .map-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, red, transparent);
+    opacity: 0.5;
+    z-index: 1;
+    animation: blink 2s linear infinite alternate;
+  }
+  
+  @keyframes blink {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.5;
+    }
+  }
+  
