@@ -69,7 +69,27 @@ a:focus {
     color: #fff;
     padding: 100px 15px;
     text-align: center;
+    position: relative;
 }
+/* Gradient background */
+.well-4::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, blue, red, green); /* Change colors as desired */
+    opacity: 0.5; /* Adjust opacity as desired */
+    z-index: -1; /* Ensure the gradient is behind other content */
+    border-radius: 100px; /* Match the border-radius of the section */
+}
+
+/* Blue shadow on image edges */
+.bg-image-1 {
+    box-shadow: 0 0 20px blue; /* Adjust the shadow color and size as desired */
+}
+
 
 .well-5 {
     background-color: #fff;
@@ -188,8 +208,8 @@ a:focus {
 
 
 .col-md-3 img.round {
-    width: 100px; /* Adjust the width as needed */
-    height: 100px; /* Adjust the height as needed */
+    width: 60px; /* Adjust the width as needed */
+    height: 60px; /* Adjust the height as needed */
     border-radius: 50%; /* Applies a 50% border radius */
     margin-bottom: 20px; /* Adds spacing between the images */
 }
@@ -244,4 +264,8 @@ a:focus {
 
 .col-md-3 a i {
     margin-right: 10px; /* Add some spacing between the icon and text */
+}
+
+.btn.rounded-btn {
+    border-radius: 30px; /* Adjust the value as needed */
 }
